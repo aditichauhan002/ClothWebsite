@@ -1230,6 +1230,56 @@ ul {
 }
 
 
+.section8{
+  position: absolute;
+}
+.section8 img{
+  margin-left: 40px;
+  width: 1450px;
+  height: 600px;
+  border-radius: 10px;
+
+}
 
 
 
+.img-texts {
+  position: absolute;
+  top: 200px; /* text ki position */
+  left: 480px;
+  color: gray;
+  font-family: sans-serif;
+  font-size: 18px;
+
+  /* text-shadow: 1px 1px 5px black; readable over image */
+}
+
+.heading5 {
+  position: absolute;
+  top: 250px; /* text ki position */
+  left: 480px;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  font-size: 70px;
+  font-weight: 900;
+
+  /* text-shadow: 1px 1px 5px black; readable over image */
+}
+
+.img-text11 {
+  position: absolute;
+  top: 430px; /* text ki position */
+  left: 480px;
+  color: gray;
+  font-family: sans-serif;
+  font-size: 18px;
+}
+
+.img-text22 {
+  position: absolute;
+  top: 530px; /* text ki position */
+  left: 480px;
+  color: black;
+  font-family: sans-serif;
+  font-size: 18px;
+}
