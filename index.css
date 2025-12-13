@@ -490,45 +490,89 @@ html {
 /* ============BEST SELLING PRODUCTS===================== */
 
 .section4 {
-  margin-top: 300px;
-  margin-left: 50px;
-}
-ul {
-  display: flex;
-  list-style: none;
-  gap: 50px;
-  font-size: 18px;
-  font-weight: 500;
-  margin-top: 50px;
-  color: gray;
+  margin-top: 100px;
+  padding: 0 20px; /* better than margin-left */
+  text-align: center;
 }
 
+.section4 h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Responsive grid for filters */
+.section4 ul {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr); /* 8 items per row on large screens */
+  gap: 10px;
+  padding: 0;
+  margin: 0 auto;
+  list-style: none;
+  max-width: 1200px;
+}
+
+.section4 ul li {
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: transparent;
+  color: #000;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Underline hover effect */
+.section4 ul li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #000;
+  transition: width 0.3s ease;
+}
+
+.section4 ul li:hover::after,
+.section4 ul li.active::after {
+  width: 50%; /* keep your original underline width */
+}
+
+.section4 ul li:hover {
+  color: #000;
+}
+
+/* Responsive breakpoints */
 @media (max-width: 1024px) {
   .section4 ul {
-    grid-template-columns: repeat(6, 1fr); /* 6 items per row */
+    grid-template-columns: repeat(6, 1fr);
   }
 }
 
 @media (max-width: 768px) {
   .section4 ul {
-    grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
 @media (max-width: 480px) {
   .section4 ul {
-    grid-template-columns: repeat(2, 1fr); /* 2 items per row on small mobile */
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .section4 h1 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 
   .section4 ul li {
     padding: 8px 10px;
-    font-size: 0.9rem;
+    font-size: 14px;
   }
 }
+
+
 /* ==============Cards==================== */
 
 .section5 {
