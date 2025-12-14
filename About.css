@@ -1,58 +1,90 @@
-.hero {
-  width: 100%;
-  height: 100vh;
-  overflow-X: hidden;
-  position: relative;
+/* =======================
+   GLOBAL SCROLL FIX
+======================= */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
 }
 
-.hero img {
+/* =======================
+   HERO / POSTER SECTION
+======================= */
+.hero {
+  position: relative;
   width: 100%;
-  height: 80%;
-  object-fit: cover;
+  min-height: 60vh;      /* responsive height */
   overflow: hidden;
 }
+
+/* Hero Image */
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Dark overlay on image */
 .hero::after {
   content: "";
   position: absolute;
   inset: 0;
-  /* light overlay */
+  background: rgba(0, 0, 0, 0.3);
   z-index: 1;
 }
 
-/* Navigation links over image */
-.hero {
-  position: relative;
-  width: 100%;
-}
-
-.hero-img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Overlay navigation */
+/* Breadcrumb / About text */
 .nav_links {
   position: absolute;
-  top: 50%;
-  left: 60px;
-  transform: translateY(-50%);
-  display: flex;
-  gap: 8px;
-  font-size: 20px;
+  bottom: 30px;
+  left: 50px;
   z-index: 2;
-  margin-left: 600px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  color: #fff;
 }
 
 .nav_links a {
+  color: #fff;
   text-decoration: none;
-  color: #000;
   font-weight: 500;
 }
 
-.nav_links a:hover {
-  color: rgb(136, 133, 133);
+.nav_links span {
+  color: #fff;
 }
+
+/* =======================
+   TABLET RESPONSIVE
+======================= */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 40vh;
+  }
+
+  .nav_links {
+    left: 20px;
+    bottom: 20px;
+    font-size: 15px;
+  }
+}
+
+/* =======================
+   MOBILE RESPONSIVE
+======================= */
+@media (max-width: 480px) {
+  .hero {
+    min-height: 35vh;
+  }
+
+  .nav_links {
+    font-size: 14px;
+  }
+}
+
 
 /* Line section */
 .line {
@@ -104,9 +136,7 @@
 
 
 @media (max-width: 992px) {
-    .hero {
-    height: 70vh;
-  }
+   
 
   .nav_links a {
     font-size: 1.2rem;
@@ -131,9 +161,7 @@
 
 @media (max-width: 600px) {
 
-  .hero {
-    height: 60vh;
-  }
+ 
 
   .nav_links {
     flex-direction: column;
