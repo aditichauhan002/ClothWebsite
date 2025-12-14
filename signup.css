@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main box */
+.signup-container {
+  width: 400px;
+  background: #fff;
+  padding: 50px 40px;
+  border-radius: 14px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.signup-container h1 {
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.signup-container p {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 35px;
+}
+
+/* Inputs */
+.signup-container input {
+  width: 100%;
+  padding: 14px 18px;
+  margin-bottom: 18px;
+  border-radius: 30px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  outline: none;
+}
+
+.signup-container input:focus {
+  border-color: #111;
+}
+
+/* Button */
+.signup-container button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 30px;
+  background: #111;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+.signup-container button:hover {
+  background: #333;
+}
+
+/* Login text */
+.login-link {
+  margin-top: 20px;
+  font-size: 13px;
+}
+
+.login-link a {
+  color: #111;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}

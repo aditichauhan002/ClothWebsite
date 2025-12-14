@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+}
+
+
+.search-section {
+
+  text-align: center;
+  padding: 80px 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Search box */
+.search-box {
+  max-width: 800px;
+  margin: 120px auto 60px;
+  position: relative;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 18px 60px 18px 30px;
+  border-radius: 50px;
+  border: 1px solid #ddd;
+  font-size: 18px;
+  outline: none;
+}
+
+.search-box input::placeholder {
+  color: #ccc;
+}
+
+/* Search icon */
+.search-icon {
+  position: absolute;
+  right: 25px;          /* 👈 always inside input */
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 22px;
+  color: #000;
+  cursor: pointer;
+}
+
+
+/* Browse text */
+.browse {
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Categories */
+.categories {
+  font-size: 42px;
+  /* font-weight: 400; */
+  line-height: 1.5;
+  color: #302f2f;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+             "Segoe UI", Helvetica, Arial, sans-serif;
+
+   font-weight: 300;
+
+}
+.categories span{
+    color: rgb(194, 190, 190);
+}
+
+.categories  a{
+    text-decoration: none;
+    color: black;
+}
+/* Responsive */
+@media (max-width: 768px) {
+
+  .search-section {
+    padding: 200px 10px;   /* 👈 left-right control */
+  }
+
+  .search-box {
+    max-width: 100%;
+    margin: 0 auto 40px;
+    padding: 0;
+  }
+
+  .search-box input {
+    width: 100%;
+    padding: 16px 48px 16px 20px;
+    font-size: 16px;
+  }
+
+  .search-icon {
+    right: 18px;
+    font-size: 20px;
+  }
+  .categories{
+    font-size: 20px;
+    margin-top: 50px;
+  }
+}
