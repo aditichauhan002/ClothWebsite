@@ -1326,3 +1326,108 @@ html {
   font-size :30px;
 }
 
+
+
+@media (max-width: 576px) {
+
+  /* Section 10 */
+  .section10 {
+    margin-top: 100px;
+  }
+
+  .heading-journal {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .section10 .heading-journal h1 {
+    font-size: 36px;
+    margin-left: 20px;
+  }
+
+  .heading-journal p {
+    margin-left: 20px;
+  }
+
+  .card-journal {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .blog-card img {
+    height: 220px;
+  }
+
+  .info h3 a {
+    font-size: 20px;
+  }
+
+  /* Line bar */
+  .linebar {
+    flex-direction: column;
+    gap: 20px;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  /* Instagram */
+  .section12 {
+    margin-top: 120px;
+  }
+
+  .section12 .heading-insta {
+    margin-left: 20px;
+  }
+
+  .section12 .heading-insta h1 {
+    font-size: 34px;
+  }
+
+  .section12 .heading-insta p {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+
+  .cards {
+    justify-content: center;
+  }
+
+  .card-img {
+    width: 150px;
+    height: 200px;
+  }
+
+  /* Section 13 */
+  .section13 .one {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+    font-size: 18px;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+
+  .card-journal {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+  .section10 .heading-journal h1 {
+    font-size: 45px;
+  }
+
+  .linebar {
+    font-size: 28px;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .section13 .one {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+}
