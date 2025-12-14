@@ -13,8 +13,9 @@ body {
 .hero {
   position: relative;
   width: 100%;
-  min-height: 60vh;      /* responsive height */
+  min-height: 60vh;
   overflow: hidden;
+  
 }
 
 /* Hero Image */
@@ -25,14 +26,6 @@ body {
   display: block;
 }
 
-/* Dark overlay on image */
-.hero::after {
-  content: "";
-  position: absolute;
-  /* inset: 0;
-  background: rgba(0, 0, 0, 0.3); 
-   z-index: 1; */
-}
 
 /* Breadcrumb / About text */
 .nav_links {
@@ -44,7 +37,7 @@ body {
   align-items: center;
   gap: 8px;
   font-size: 18px;
-  color: #fff;
+  color: black;
 }
 
 .nav_links a {
@@ -56,6 +49,21 @@ body {
 .nav_links span {
   color: #fff;
 }
+@media (max-width: 600px) {
+  .hero {
+    min-height: 45vh;   /* thodi height badhao */
+  }
+
+  .nav_links {
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    flex-direction: row;   /* column nahi */
+    font-size: 14px;
+    white-space: nowrap;   /* wrap hone se bachaata hai */
+  }
+}
+
 
 /* =======================
    TABLET RESPONSIVE
@@ -66,7 +74,7 @@ body {
   }
 
   .nav_links {
-   display: none;
+    font-size: 16px;
   }
 }
 
@@ -80,7 +88,7 @@ body {
 
   .nav_links {
     font-size: 14px;
-    display: none;
+    /* display: none; */
   }
 }
 
