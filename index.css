@@ -492,7 +492,7 @@ html {
 .section4 {
   margin-top: 100px;
   padding: 0 20px; /* better than margin-left */
-  text-align: center;
+  margin-left: 40px;
 }
 
 .section4 h1 {
@@ -506,7 +506,7 @@ html {
   grid-template-columns: repeat(8, 1fr); /* 8 items per row on large screens */
   gap: 10px;
   padding: 0;
-  margin: 0 auto;
+  margin: 0px;
   list-style: none;
   max-width: 1200px;
 }
@@ -1083,4 +1083,30 @@ html {
 .img-text22:hover i {
   transform: translateX(4px); /* just move right */
   color: #6096b4;
+}
+
+
+
+.section9{
+  margin-top: 250px;
+  text-align: center;
+}
+.section9 h1{
+  font-size: 50px;
+  font-family: sans-serif;
+  font-weight: 900;
+}
+.section9 p{
+ color: gray;
+  font-size:28px;
+  width: 700px;
+  
+ margin: 50px auto;
+}
+
+.section9 h6{
+  color: gray;
+  font-size: 25px;
+  font-family: monospace;
+  font-weight: 700;
 }
