@@ -4,11 +4,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
     userDropdown.addEventListener("click", function(e) {
       e.stopPropagation(); // prevent closing immediately
-      dropdownMenu.style.display = dropdownMenu.style.display === "flex" ? "none" : "flex";
+      userDropdown.classList.toggle("active");
     });
 
-    // Close dropdown when clicking outside
     document.addEventListener("click", function() {
-      dropdownMenu.style.display = "none";
+      userDropdown.classList.remove("active");
     });
   });
