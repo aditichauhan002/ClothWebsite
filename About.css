@@ -7,7 +7,7 @@
 
 .hero img {
   width: 100%;
-  height: 80%;
+  height: 100%;
   object-fit: cover;
   overflow: hidden;
 }
@@ -20,16 +20,18 @@
 }
 
 /* Navigation links over image */
-.hero {
-  position: relative;
-  width: 100%;
-}
 
-.hero-img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
+ 
+ 
+
+
+
+ 
+ 
+ 
+
+
+
 
 /* Overlay navigation */
 .nav_links {
@@ -41,7 +43,11 @@
   gap: 8px;
   font-size: 20px;
   z-index: 2;
-  margin-left: 600px;
+  /* margin-left: 600px; */
+}
+
+.nav_links span {
+  color: #000;
 }
 
 .nav_links a {
@@ -54,32 +60,96 @@
   color: rgb(136, 133, 133);
 }
 
-/* Line section */
+@media (max-width: 576px) {
+  .hero {
+    height: 60vh;
+  }
+
+  .nav_links {
+    font-size: 16px;
+    gap: 6px;
+  }
+}
+
+/* 📱 Tablet screens */
+@media (max-width: 768px) {
+  .hero {
+    height: 70vh;
+  }
+
+  .nav_links {
+    font-size: 18px;
+  }
+}
+
+
 .line {
-  margin-top: 120px;
+  margin-top: 80px;
   width: 100%;
+  padding: 0 16px;
 }
 
 .line ul {
   display: flex;
   justify-content: center;
-  gap: 60px;
+  align-items: center;
+  gap: 40px;
   list-style: none;
   padding: 0;
+  margin: 0;
   flex-wrap: wrap;
 }
 
+/* List item */
 .line li {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   display: flex;
   align-items: center;
   gap: 10px;
+  white-space: nowrap;
 }
 
+/* Icons */
 .line i {
   color: rgba(0, 68, 255, 0.8);
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
+
+/* 📱 Mobile screens */
+@media (max-width: 576px) {
+  .line {
+    margin-top: 40px;
+  }
+
+  .line ul {
+    gap: 20px;
+  }
+
+  .line li {
+    font-size: 0.95rem;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .line i {
+    font-size: 1.2rem;
+  }
+}
+
+/* 📱 Tablet screens */
+@media (max-width: 768px) {
+  .line ul {
+    gap: 30px;
+  }
+
+  .line li {
+    font-size: 1rem;
+  }
+}
+
+
 
 .about-section {
   max-width: 1200px;
@@ -104,15 +174,7 @@
 
 
 @media (max-width: 992px) {
-    .hero {
-    height: 70vh;
-  }
-
-  .nav_links a {
-    font-size: 1.2rem;
-  } 
-
-
+ 
   .about-section {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -131,20 +193,6 @@
 
 @media (max-width: 600px) {
 
-  .hero {
-    height: 60vh;
-  }
-
-  .nav_links {
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
-     padding: 20px;
-  }
-
-  .nav_links a {
-    font-size: 1rem;
-  }
   .about-section {
     margin: 60px auto;
   }
