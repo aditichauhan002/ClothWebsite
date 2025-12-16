@@ -1,0 +1,106 @@
+/* Footer main container */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 50px;
+  background-color: #f9f9f9;
+  gap: 20px;
+}
+
+.footer-col {
+  flex: 1 1 200px;
+}
+
+
+.footer-col h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #777;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: #000;
+}
+
+.footer-col p,
+.footer-col a.email,
+.footer-col .phone {
+  color: #777;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  color: #000;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  border-top: 1px solid #e1e1e1;
+  padding: 20px 50px;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+.footer-bottom-container {
+  display: grid;
+  grid-template-columns: 8fr 4fr; /* Two equal columns */
+  gap: 700px;
+}
+.footer-bottom-container p a{
+    text-decoration: none;
+    color: rgb(126, 186, 208);
+}
+.payment-icons {
+  display: flex;
+  align-items: center; /* vertically center icons with text */
+}
+
+.footer-bottom p {
+  color: #777;
+  margin: 0;
+}
+
+.payment-icons img {
+  height: 25px;
+  margin-left: 10px;
+}
+.social-icons{
+    transition: color 0.3s ease,transform 0.3s ease;
+}
+.social-icons i:hover{
+    color: rgb(128, 152, 228);
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}

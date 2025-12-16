@@ -52,3 +52,36 @@ const filters = document.querySelectorAll(".section4 ul li");
     showSlide(index);
   });
 
+
+
+  // ---------------------------------------------------------------
+
+  fetch("navbar.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("navbar").innerHTML = data;
+
+    // now add hover dropdown JS
+    document.querySelectorAll('.custom-dropdown').forEach(function (dropdown) {
+      dropdown.addEventListener('mouseenter', function () {
+        const menu = this.querySelector('.dropdown-menu');
+        if (window.innerWidth >= 992) menu.classList.add('show');
+      });
+      dropdown.addEventListener('mouseleave', function () {
+        const menu = this.querySelector('.dropdown-menu');
+        if (window.innerWidth >= 992) menu.classList.remove('show');
+      });
+    });
+  });
+
+
+
+
+  // ----------------------------------Footer--------------------------------------
+
+
+    fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer').innerHTML = data;
+    });

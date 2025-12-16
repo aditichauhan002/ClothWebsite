@@ -1,0 +1,220 @@
+/* ===================== GLOBAL ===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===================== TOP BAR ===================== */
+.top-bar {
+  position: relative;
+  z-index: 1100;
+  color: gray;
+  font-size: 15px;
+  background: #fafafa;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 6px 0;
+}
+
+.top-bar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-bar .iconss {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.top-bar .iconss i {
+  cursor: pointer;
+  color: gray;
+  transition: 0.3s;
+}
+
+.top-bar .iconss i:hover {
+  color: #000;
+}
+
+/* ===================== USER DROPDOWN ===================== */
+.user-dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+.user-dropdown .dropdown-menu {
+  position: absolute;
+  top: 36px;
+  right: 0;
+  background: #f2f2f2;
+  border-radius: 6px;
+  width: 140px;
+  display: none; /* hidden by default */
+  flex-direction: column;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  z-index: 3000;
+}
+
+.user-dropdown.active .dropdown-menu {
+  display: flex; /* show when active */
+}
+
+.user-dropdown .dropdown-menu a {
+  padding: 10px 15px;
+  font-size: 14px;
+  color: #111;
+  text-decoration: none;
+}
+
+.user-dropdown .dropdown-menu a:hover {
+  background: #ddd;
+}
+
+/* Desktop hover */
+@media (min-width: 992px) {
+  .user-dropdown:hover .dropdown-menu {
+    display: flex;
+  }
+}
+
+/* ===================== NAVBAR ===================== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-size: 16px;
+  padding: 10px 20px;
+  background: #fff;
+}
+
+.navbar-brand {
+  font-size: 28px;
+  font-weight: 700;
+  color: #111;
+}
+
+.navbar-brand p {
+  font-size: 12px;
+  color: gray;
+  margin: 0;
+}
+
+.navbar-nav {
+  gap: 28px;
+}
+
+.navbar-nav .nav-link {
+  color: #333;
+  font-size: 17px;
+  font-weight: 500;
+  padding: 8px 12px;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #6096b4;
+}
+
+/* ===================== CUSTOM NAV DROPDOWN ===================== */
+.custom-dropdown {
+  position: relative;
+}
+
+.custom-dropdown .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  min-width: 100px;
+  background: rgba(17, 17, 17, 0.92);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 14px 0;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  transform: translateY(15px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+  z-index: 1500;
+}
+
+@media (min-width: 992px) {
+  .custom-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+}
+
+.custom-dropdown .dropdown-item {
+  padding: 12px 22px;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.85);
+  transition: 0.25s ease;
+}
+
+.custom-dropdown .dropdown-item:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+/* ===================== MOBILE FIXES ===================== */
+@media (max-width: 991px) {
+  /* Hide top-bar text */
+  .top-bar .container p {
+    display: none;
+  }
+
+  .top-bar {
+    padding: 6px 12px;
+  }
+
+  /* Navbar layout */
+  .navbar-nav {
+    flex-direction: column;
+    gap: 0;
+    align-items: flex-start;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 12px 15px;
+    width: 100%;
+  }
+
+ .user-dropdown .dropdown-menu {
+    display: none;
+    top: 36px;
+    right: 0;
+    flex-direction: column;
+    background: #f2f2f2;
+    border-radius: 6px;
+    width: 140px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    z-index: 3000;
+    position: absolute;
+  }
+
+  /* Show when JS adds "show" class */
+  .user-dropdown .dropdown-menu.show {
+    display: flex;
+  }
+}
+@media (min-width: 992px) {
+  .user-dropdown:hover .dropdown-menu {
+    display: flex;
+  }
+}
+
+/* ===================== EXTRA SMALL SCREENS ===================== */
+@media (max-width: 576px) {
+  .user-dropdown .dropdown-menu {
+    min-width: 130px;
+  }
+}
